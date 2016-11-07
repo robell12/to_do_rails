@@ -1,0 +1,19 @@
+<h1>All things to do</h1>
+<h2>Official ToDo List</h2>
+<hr />
+
+<ul>
+	<% @posts.each do |post| %>
+		<li>
+			<%= post.title %>
+			<a>:</a>
+			<%= post.item %>
+			<%= link_to 'Show', post_path(post) %>
+			<%= link_to 'Edit', edit_post_path(post) %>
+			<%= link_to 'Delete', post_path(post), method: :delete, data: {confirm: 'You sure you want to delete that dude?'} %>
+		</li>
+	<% end %>
+</ul>
+
+<%= link_to 'New Post', new_post_path %>
+<%= link_to 'Main Menu', root_path %>

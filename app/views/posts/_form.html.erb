@@ -1,0 +1,20 @@
+<div class="form">
+	<%= form_for @post do |f| %>
+		<%= f.label :title %>
+		<%= f.text_field :title %>
+		<br />
+		<%= f.label :item %>
+		<%= f.text_field :item %>
+		<br />
+		<%= f.label :body %>
+		<%= f.text_area :body %>
+		<br />
+		<%= f.label :urgency %>
+		<%= f.check_box :urgency %>
+		<br />
+		<%= f.label :completed %>
+		<%= f.check_box :completed %>
+		<br />
+		<%= f.submit %>
+	<% end %>
+</div>

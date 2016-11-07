@@ -1,0 +1,22 @@
+<h1> <%= @post.title %></h1>
+<hr />
+
+<p>Item:
+	<i> 
+		<%= @post.item %>
+	</i>
+</p>
+
+<blockquote>
+	<%= @post.body %>
+</blockquote>
+
+<h4> 
+	Is Urgent: <%= @post.urgency ? 'Yes' : 'No' %>
+</h4>
+
+<h6> 
+	Is Completed: <%= @post.completed ? 'Yes' : 'No' %>
+</h6>
+
+<%= link_to 'Back', posts_path %>
